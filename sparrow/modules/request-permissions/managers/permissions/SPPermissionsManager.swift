@@ -23,15 +23,7 @@ import Foundation
 
 public enum SPRequestPermissionType {
     case camera
-    case photoLibrary
     case notification
-    case microphone
-    case calendar
-    case locationAlways
-    case locationWhenInUse
-    case locationWithBackground
-    case contacts
-    case reminders
 }
 
 class SPPermissionsManager: SPPermissionsManagerInterface {
@@ -52,24 +44,8 @@ class SPPermissionsManager: SPPermissionsManagerInterface {
         switch permission {
         case .camera:
             return SPCameraPermission()
-        case .photoLibrary:
-            return SPPhotoLibraryPermission()
         case .notification:
             return SPNotificationPermission()
-        case .microphone:
-            return SPMicrophonePermission()
-        case .calendar:
-            return SPCalendarPermission()
-        case .locationAlways:
-            return SPLocationPermission(type: SPLocationPermission.SPLocationType.Always)
-        case .locationWhenInUse:
-            return SPLocationPermission(type: SPLocationPermission.SPLocationType.WhenInUse)
-        case .locationWithBackground:
-            return SPLocationPermission(type: SPLocationPermission.SPLocationType.AlwaysWithBackground)
-        case .contacts:
-            return SPContactsPermission()
-        case .reminders:
-            return SPRemindersPermission()
         }
     }
 }

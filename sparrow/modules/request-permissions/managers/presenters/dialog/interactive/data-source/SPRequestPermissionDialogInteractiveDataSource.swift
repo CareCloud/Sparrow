@@ -29,24 +29,8 @@ open class SPRequestPermissionDialogInteractiveDataSource: NSObject, SPRequestPe
         switch permission {
         case .camera:
             iconBezierPath = SPBezierPathFigure.icons.camera()
-        case .photoLibrary:
-            iconBezierPath = SPBezierPathFigure.icons.photo_library()
         case .notification:
             iconBezierPath = SPBezierPathFigure.icons.notification()
-        case .microphone:
-            iconBezierPath = SPBezierPathFigure.icons.microphone()
-        case .calendar:
-            iconBezierPath = SPBezierPathFigure.icons.calendar()
-        case .locationWhenInUse:
-            iconBezierPath = SPBezierPathFigure.icons.location()
-        case .locationAlways:
-            iconBezierPath = SPBezierPathFigure.icons.location()
-        case .locationWithBackground:
-            iconBezierPath = SPBezierPathFigure.icons.location()
-        case .contacts:
-            iconBezierPath = SPBezierPathFigure.icons.contacts()
-        case .reminders:
-            iconBezierPath = SPBezierPathFigure.icons.reminders()
         }
 
         iconBezierPath.resizeTo(width: requestWidth)
@@ -65,24 +49,8 @@ open class SPRequestPermissionDialogInteractiveDataSource: NSObject, SPRequestPe
         switch permission {
         case .camera:
             title = SPRequestPermissionData.texts.enable_camera()
-        case .photoLibrary:
-            title = SPRequestPermissionData.texts.enable_photoLibrary()
         case .notification:
             title = SPRequestPermissionData.texts.enable_notification()
-        case .microphone:
-            title = SPRequestPermissionData.texts.enable_microphone()
-        case .calendar:
-            title = SPRequestPermissionData.texts.enable_calendar()
-        case .locationWhenInUse:
-            title = SPRequestPermissionData.texts.enable_location()
-        case .locationAlways:
-            title = SPRequestPermissionData.texts.enable_location()
-        case .locationWithBackground:
-            title = SPRequestPermissionData.texts.enable_location()
-        case .contacts:
-            title = SPRequestPermissionData.texts.enable_contacts()
-        case .reminders:
-            title = SPRequestPermissionData.texts.enable_reminedrs()
         }
         return title
     }
